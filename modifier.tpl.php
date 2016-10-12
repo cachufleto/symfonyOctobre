@@ -34,19 +34,19 @@ echo <<<EOL
 		<div class="label">Article</div>
 		<div class="input"><textarea name="content" value="">$content</textarea></div>
 		<div class="label">&nbsp;</div>
-		<div class="input"><input type="submit" name="valide" value="ajouter"></div>
+		<div class="input"><input type="hidden" name="id" value="$id"></div>
+        <div class="input"><input type="submit" name="valide" value="modifier"></div>
 	</form>
 	</div>
 	<div id="content">
-	$listeArticles
 EOL;
-if(!empty($articles)) {
-    foreach ($articles as $data) {
+if(!empty($article)) {
         echo "
-<div class='titre'>{$data['title']}<span class='actions'> <a href='modifier.php?article={$data['id']}'>Mod.</a> <a href='supprimer.php?article={$data['id']}'>Sup.</a></span></div>
-<div class='content'>{$data['content']}</div>
-<div class='date'>{$data['date']}</div>";
-    }
+<div class='titre'>{$article['title']}<span class='actions'> 
+<a href='modifier.php?article={$article['id']}'>Mod.</a> 
+<a href='supprimer.php?article={$article['id']}'>Sup.</a></span></div>
+<div class='content'>{$article['content']}</div>
+<div class='date'>{$article['date']}</div>";
 }
 echo <<<EOL
 	</div>

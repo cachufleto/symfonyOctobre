@@ -48,8 +48,8 @@ if($_POST){
 	}
 	
 	if(!$error && connexionAuteur($_POST)){
-		$message = "Connexion OK";
-		header('Location: ajouter.php');
+		header('Location:ajouter.php');
+        exit;
 	} else {
 		$alert .= "Nous ne vous avons pas trouvé parmis nos auteurs<br>Merci de verifier votre login et mot de passe<br>";
 	}
