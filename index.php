@@ -1,6 +1,7 @@
 <?php
 require_once 'inc/constants.php';
 require_once INC . 'routes.php';
+require_once INC . 'autoload.php';
 
 /*******************************************************/
 
@@ -15,8 +16,8 @@ if(isset($_GET['page'])){
     }
 }
 
-include CONT . $controller.'.php';
+//include CONT . $controller.'.php';
+$controller = "App\\Controllers\\$controller";
 
-/********************************************************/
-
-$action();
+$app = new $controller();
+$app->$action();
