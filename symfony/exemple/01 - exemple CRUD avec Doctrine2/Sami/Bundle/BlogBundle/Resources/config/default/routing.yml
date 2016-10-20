@@ -1,0 +1,3 @@
+sami_blog_default_index:
+  path: /index/{x}/{z}
+  defaults: {_controller: SamiBlogBundle:Default:index }

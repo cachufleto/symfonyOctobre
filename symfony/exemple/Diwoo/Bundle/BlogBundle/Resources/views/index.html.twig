@@ -1,0 +1,67 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+    <style>
+        .alert{
+            color:red;
+        }
+
+        .message{
+            color:green;
+        }
+
+        #menu,
+        #content,
+        #form {
+            width: 450px;
+            margin: 10% auto;
+        }
+
+        #form .label{
+            float: left;
+            width:20%;
+        }
+
+        #form .input{
+            float: left;
+            width:79%;
+        }
+
+        #form .input textarea,
+        #form .input input{
+            width: 100%;
+        }
+
+        #form .input textarea{
+            height: 331px;
+        }
+
+        #content .titre {
+            margin-top: 25px;
+            color: blue;
+            font-size: 2em;
+            font-family: fantasy;
+        }
+
+        #content .actions a{
+            font-size: 0.6em;
+            font-family: fantasy;
+
+        }
+
+        #content .content {
+            color:gray;
+        }
+        #content .date {
+            color:gray;
+            font-size: .8em;
+            font-family: fantasy;
+            float: right;
+        }
+
+    </style>
+{% endblock %}
+{% block body %}
+    <div id="content">
+    {% block corp %}{% endblock %}
+    </div>
+{% endblock %}

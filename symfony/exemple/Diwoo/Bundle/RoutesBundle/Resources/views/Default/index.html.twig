@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+Hello World!<br>
+<br>
+<ul>
+    <li>
+        <a href="{{ path('diwoo_routes_homepage') }}">Homme</a>
+        diwoo_routes_homepage:
+    </li>
+    <li>
+        <a href="{{
+            path(
+                'diwoo_routes_deux_arguments',
+                {arg1: 2, arg2: 3}
+            )}}"> Deux Arguments </a>
+    </li>
+    <li>
+        <a href="{{
+            path(
+                'diwoo_routes_trois_arguments',
+                {arg1: 'Un', arg2: 'Deux', arg3: 'Riens'}
+            )}}">Trois Arguments</a>
+    </li>
+    <li>
+        <a href="{{
+            path(
+                'diwoo_routes_date',
+                {fecha: '10/10/2000'}
+        )}}">Date</a>
+    </li>
+</ul>
+{% block corp %}{% endblock %}
+{% endblock %}
+
+
+

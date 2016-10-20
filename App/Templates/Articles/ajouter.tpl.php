@@ -4,6 +4,7 @@ echo <<<EOL
 	<div class="alert">$alert</div>
 	<div class="message">$message</div>
 	<form action="" method="post">
+	    <input type="hidden" name="$token" value = '$infoToken'>
 		<div class="label">Titre</div>
 		<div class="input"><input type="text" name="titre" value="$titre"></div>
 		<div class="label">Article</div>

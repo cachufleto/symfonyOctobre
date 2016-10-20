@@ -1,0 +1,4 @@
+services:
+#    diwoo_routes.example:
+#        class: Diwoo\Bundle\RoutesBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

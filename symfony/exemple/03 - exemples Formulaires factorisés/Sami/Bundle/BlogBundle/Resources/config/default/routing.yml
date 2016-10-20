@@ -1,0 +1,15 @@
+sami_blog_default_index:
+  path: /index/{x}/{z}
+  defaults: {_controller: SamiBlogBundle:Default:index }
+
+sami_blog_default_unbeauformulaire:
+  path: /un/beau/formulaire
+  defaults: {_controller: SamiBlogBundle:Default:unbeauformulaire }
+
+sami_blog_default_ajouterutilisateur:
+  path: /ajouter/utilisateur
+  defaults: {_controller: SamiBlogBundle:Default:ajouterUtilisateur }
+
+sami_blog_default_voirarticle:
+  path: /voir/article/{article}
+  defaults: {_controller: SamiBlogBundle:Default:voirArticle }

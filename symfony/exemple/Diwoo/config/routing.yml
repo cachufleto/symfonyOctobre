@@ -1,0 +1,15 @@
+diwoo_blog:
+    resource: "@DiwooBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+diwootest:
+    resource: "@DiwootestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+diwoo_routes:
+    resource: "@DiwooRoutesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

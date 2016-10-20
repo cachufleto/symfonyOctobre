@@ -1,0 +1,7 @@
+diwoo_routes_default:
+    resource: "@DiwooRoutesBundle/Resources/config/test/routing.yml"
+    prefix:   /routes
+
+diwoo_routes_test:
+    resource: "@DiwooRoutesBundle/Resources/config/test/routingTest.yml"
+    prefix:   /test

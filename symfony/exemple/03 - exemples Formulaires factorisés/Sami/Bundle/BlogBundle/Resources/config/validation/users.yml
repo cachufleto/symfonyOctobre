@@ -1,0 +1,18 @@
+Sami\Bundle\BlogBundle\Entity\Users:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: 
+            fields: email
+            message: Cette adresse e-mail est déjà utilisée.
+    properties:
+        username:
+            - NotBlank:
+                message: Votre nom d'utilisateur est obligatoire.
+        password:
+            - NotBlank:
+                message: Votre mot de passe est obligatoire.
+        email:
+            - NotBlank:
+                message: Votre adresse e-mail doit être fournie.
+            - Email:
+                message: L'adresse e-mail "{{ value }}" n'est pas un adresse e-mail valide.
+                checkMX: true

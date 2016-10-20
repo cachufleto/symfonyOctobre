@@ -1,0 +1,30 @@
+{% extends 'DiwooBlogBundle::index.html.twig' %}
+
+{% block title %}
+    Auteurs
+{% endblock %}
+
+{% block corp %}
+    <h3>MON BLOG</h3>
+    {% if app.environment == 'dev' %}
+        <a href="{{path('diwoo_blog_ajouter_article')}}">Ajouter un Article</a>
+        <a href="{{path('diwoo_blog_ajouter_auteur')}}">Ajouter un Auteur</a>
+    {% else %}
+        <a href="">On ne peut pas Ajouter un Auteur</a>
+    {% endif %}
+    {% for article in liste %}
+        <div class='titre'>{{ article.title }}             <a href="{{
+            path(
+            'diwoo_blog_modifier',
+            {id: article.id}
+            )}}">Mod</a>
+            <a href="{{
+            path(
+            'diwoo_blog_supprimer',
+            {id: article.id}
+            )}}">Sup</a>
+        </div>
+        <div class='content'>{{ article.content }}</div>
+        <div class='date'>{{ article.picture }}</div>
+    {% endfor %}
+{% endblock %}

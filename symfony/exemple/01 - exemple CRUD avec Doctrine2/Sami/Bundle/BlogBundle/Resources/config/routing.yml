@@ -1,0 +1,7 @@
+sami_blog_default:
+    resource: "@SamiBlogBundle/Resources/config/default/routing.yml"
+    prefix: /default
+
+sami_blog_test:
+    resource: "@SamiBlogBundle/Resources/config/test/routing.yml"
+    prefix: /test

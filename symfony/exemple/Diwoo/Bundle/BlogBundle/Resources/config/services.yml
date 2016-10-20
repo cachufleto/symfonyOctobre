@@ -1,0 +1,4 @@
+services:
+#    diwoo_blog.example:
+#        class: Diwoo\Bundle\BlogBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

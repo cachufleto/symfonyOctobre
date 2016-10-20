@@ -40,7 +40,7 @@ class articles extends superController
         //use App\Models;
         $model = new \App\Models\Articles();
 
-        if ($_POST) {
+        if ($this->testPost()) {
             // valider les informations
             if (!isset($_POST['titre']) OR empty($_POST['titre'])) {
                 $error = true;
@@ -73,6 +73,8 @@ class articles extends superController
         $this->render('Articles' . DS . 'ajouter', [
             'title' => "AJOUTER",
             'titre' => $titre,
+            'token' => $_SESSION['newToken'],
+            'infoToken' => $_SESSION['newSession'],
             'message' => "Bonjour {$_SESSION['auteur']['prenom']} {$_SESSION['auteur']['nom']}",
             'alert' => $alert,
             'listeArticles' => $listeArticles,

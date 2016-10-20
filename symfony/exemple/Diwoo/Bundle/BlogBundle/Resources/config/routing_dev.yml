@@ -1,0 +1,8 @@
+diwoo_blog_ajouter_auteur:
+    path:     /blog/ajout/auteur
+    defaults: { _controller: DiwooBlogBundle:Default:ajouterAuteur }
+
+diwoo_blog_ajouter_article:
+    path:     /blog/ajout/article
+    defaults: { _controller: DiwooBlogBundle:Default:ajouterArticle }
+

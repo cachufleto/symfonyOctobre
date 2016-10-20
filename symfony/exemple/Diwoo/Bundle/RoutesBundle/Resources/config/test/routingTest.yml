@@ -1,0 +1,27 @@
+diwoo_routes_homepage_test:
+    path:     /
+    defaults: { _controller: DiwooRoutesBundle:Test:index }
+
+diwoo_routes_deux_arguments_test:
+    path:     /deux/{arg1}-{arg2}
+    defaults: { _controller: DiwooRoutesBundle:Test:deuxArguments }
+    methods: [GET]
+    requirements:
+        arg1: '[0-9]*'
+        arg2: '[0-9]*'
+
+diwoo_routes_trois_arguments_test:
+    path:     /trois/{arg1}-{arg2}-{arg3}
+    defaults: { _controller: DiwooRoutesBundle:Test:troisArguments, arg3: NULL }
+    methods: [GET]
+    requirements:
+        arg1: '[a-zA-Z0-9]*'
+        arg2: '[a-zA-Z0-9]*'
+
+diwoo_routes_date_test:
+    path:     /fecha/{fecha}
+    defaults: { _controller: DiwooRoutesBundle:Test:dateArguments, fecha: NULL }
+    methods: [GET]
+    requirements:
+        fecha: '[0-1][0-9]/[0-3][0-9]/[1-2][0-9]{3}'
+

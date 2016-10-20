@@ -1,0 +1,16 @@
+diwoo_blog_homepage:
+    path:     /blog
+    defaults: { _controller: DiwooBlogBundle:Default:index }
+
+diwoo_blog_ajouter_ok:
+    path:     /blog/cree
+    defaults: { _controller: DiwooBlogBundle:Default:cree }
+
+diwoo_blog_supprimer:
+    path:     /blog/sup/{id}
+    defaults: { _controller: DiwooBlogBundle:Default:supprimer }
+
+diwoo_blog_modifier:
+    path:     /blog/mod/{id}
+    defaults: { _controller: DiwooBlogBundle:Default:modifier }
+

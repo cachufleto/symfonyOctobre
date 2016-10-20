@@ -1,0 +1,3 @@
+sami_blog_test_index:
+  path: /
+  defaults: {_controller: SamiBlogBundle:Test:index }

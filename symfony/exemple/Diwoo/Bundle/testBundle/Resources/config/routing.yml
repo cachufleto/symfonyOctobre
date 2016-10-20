@@ -1,0 +1,7 @@
+diwootest_homepage:
+    path:     /test
+    defaults: { _controller: DiwootestBundle:Default:index }
+
+diwootest_test:
+    path:     /test/deux
+    defaults: { _controller: DiwootestBundle:Default:deux }
