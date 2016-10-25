@@ -83,7 +83,8 @@ class DefaultController extends Controller
 
         $formTypeFormView = $formTypeForm->createView();
 
-        return $this->render('DiwooBlogBundle:Default:ajouterAuteur.html.twig', array( 'formulaireAjout' => $formTypeFormView, 'req' => $requete ));
+        return $this->render('DiwooBlogBundle:Default:ajouterAuteur.html.twig',
+            array( 'formulaireAjout' => $formTypeFormView, 'req' => $requete ));
     }
 
     public function ajouterArticleAction(Request $requete)
@@ -119,7 +120,8 @@ class DefaultController extends Controller
         /************************************************************************/
 
         $formTypeFormView = $formTypeForm->createView();
-        return $this->render('DiwooBlogBundle:Default:ajouterAuteur.html.twig', array( 'formulaireAjout' => $formTypeFormView, 'req' => $requete ));
+        return $this->render('DiwooBlogBundle:Default:ajouterAuteur.html.twig',
+            array( 'formulaireAjout' => $formTypeFormView, 'req' => $requete ));
     }
 
     public function formulaireArticle($article)
@@ -172,6 +174,7 @@ class DefaultController extends Controller
             $auteur = $entityRepository->find($_SESSION['user']);
 
             $article->setAuteur($auteur);
+
             $doctrine = $this->getDoctrine();
             $entityManager = $doctrine->getManager();
             $entityManager->persist($article);
@@ -185,7 +188,8 @@ class DefaultController extends Controller
 
         $formTypeFormView = $formTypeForm->createView();
 
-        return $this->render('DiwooBlogBundle:Default:ajouterAuteur.html.twig', array( 'formulaireAjout' => $formTypeFormView, 'req' => $requete ));
+        return $this->render('DiwooBlogBundle:Default:ajouterAuteur.html.twig',
+            array( 'formulaireAjout' => $formTypeFormView, 'req' => $requete ));
     }
 
 }

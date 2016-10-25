@@ -1,0 +1,11 @@
+diwoo_cms_articles:
+    resource: "@DiwooCmsBundle/Resources/config/routing/articles.yml"
+    prefix:   /articles
+
+diwoo_cms_auteurs:
+    resource: "@DiwooCmsBundle/Resources/config/routing/auteurs.yml"
+    prefix:   /auteurs
+
+cms_homepage:
+    path:     /
+    defaults: { _controller: DiwooCmsBundle:Default:index }

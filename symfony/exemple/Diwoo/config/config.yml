@@ -5,11 +5,13 @@ imports:
     - { resource: "@DiwooRoutesBundle/Resources/config/services.yml" }
     - { resource: "@DiwootestBundle/Resources/config/services.yml" }
     - { resource: "@DiwooBlogBundle/Resources/config/services.yml" }
+    - { resource: "@DiwooCmsBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
+    picturs_directory: '%kernel.root_dir%/../web/uploads/picturs'
 
 framework:
     #esi:             ~
@@ -37,7 +39,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
-
+    globals:
+        picturs_directory: "%picturs_directory%"
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -67,3 +70,9 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~

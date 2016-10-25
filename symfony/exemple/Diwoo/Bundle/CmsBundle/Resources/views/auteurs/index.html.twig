@@ -1,0 +1,45 @@
+{% extends 'DiwooCmsBundle:Default:index.html.twig' %}
+
+{% block body %}
+    <h1>Les auteurs</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Login</th>
+                <th>Mdp</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for auteur in auteurs %}
+            <tr>
+                <td><a href="{{ path('auteurs_show', { 'id': auteur.id }) }}">{{ auteur.name }}</a></td>
+                <td>{{ auteur.lastname }}</td>
+                <td>{{ auteur.login }}</td>
+                <td>{{ auteur.mdp }}</td>
+                <td>{{ auteur.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('auteurs_show', { 'id': auteur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('auteurs_edit', { 'id': auteur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('auteurs_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

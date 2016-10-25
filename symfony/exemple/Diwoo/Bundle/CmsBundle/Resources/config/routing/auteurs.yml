@@ -1,0 +1,24 @@
+auteurs_index:
+    path:     /
+    defaults: { _controller: "DiwooCmsBundle:Auteurs:index" }
+    methods:  GET
+
+auteurs_show:
+    path:     /{id}/show
+    defaults: { _controller: "DiwooCmsBundle:Auteurs:show" }
+    methods:  GET
+
+auteurs_new:
+    path:     /new
+    defaults: { _controller: "DiwooCmsBundle:Auteurs:new" }
+    methods:  [GET, POST]
+
+auteurs_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "DiwooCmsBundle:Auteurs:edit" }
+    methods:  [GET, POST]
+
+auteurs_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "DiwooCmsBundle:Auteurs:delete" }
+    methods:  DELETE

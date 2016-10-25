@@ -1,3 +1,7 @@
+cms:
+    resource: "@DiwooCmsBundle/Resources/config/routing.yml"
+    prefix:   /
+
 diwoo_blog:
     resource: "@DiwooBlogBundle/Resources/config/routing.yml"
     prefix:   /
